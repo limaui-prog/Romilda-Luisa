@@ -1,0 +1,218 @@
+#content {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column; 
+    padding-top: 45px;
+    padding-bottom: 40px;
+    overflow: hidden; 
+    gap: 20px;
+}
+#redes {
+    position: relative; 
+    width: 100%; 
+    padding-top: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column; 
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+#nome {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.7rem;
+}
+
+span{
+    font-weight: 100;
+    font-size: 1rem;
+}
+
+#social-media-buttons {
+    display: flex;
+    font-size: 1.3rem;
+    gap: 20px;
+}
+
+i {
+   color: var(--black); 
+}
+
+#mais {
+    width: 500px;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 20px;
+    overflow: hidden;
+}
+
+#setas {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    padding: 0 20px;
+    margin-bottom: 10px;
+}
+
+#setas button {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 0.3s;
+    padding: 5px 10px;
+    position: relative;
+    z-index: 10;
+    pointer-events: all;
+}
+
+#cards {
+    padding-top: 10px;
+    pointer-events: auto;
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    overflow: hidden; 
+    scroll-behavior: smooth;
+    position: relative;
+}
+
+.Card {
+    width: 240px;
+    height: 330px;
+    border-radius: 15px;
+    overflow: hidden;
+    flex-shrink: 0;
+    position: relative;
+    transition: transform 0.3s;
+    z-index: 1;
+}
+
+.Card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.Card-arrow {
+    color: var(--white);
+    display: flex;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 2;
+    transform: rotate(45deg);
+    font-size: 22px;
+}
+
+.Card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.Titulo {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: var(--white);
+    font-size: 0.9rem;
+    z-index: 2;
+    margin: 0;
+    text-align: left;
+    max-width: calc(100% - 60px);
+}
+
+.round-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+    height: 30px;
+    border-radius: 50px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 10px;
+    border: 1px solid black; /* Simplificado */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 20px;
+    margin: 0 auto; /* Centraliza o botão */
+    position: relative; /* Adicionado */
+    background-color: white; /* Garante fundo branco */
+}
+        
+        .round-button:hover{
+            background-color: black;
+            color: white;
+        } 
+        .round-button:hover .Pay-arrow {
+            color: white; 
+        }
+
+        .round-button:hover #vetor {
+            filter: brightness(0) invert(1);
+        }
+
+        #vetor{
+            width: 20px;
+        }
+        
+        .round-button:active {
+            transform: scale(0.98);
+        }
+        .Pay-arrow {
+            display: flex;
+            top: 15px;
+            right: 15px;
+            z-index: 2;
+            font-size: 22px;
+        }
+    @keyframes arrowRunRight {
+    0% { transform: translateX(0); opacity: 1; }
+    50% { transform: translateX(15px); opacity: 0; }
+    51% { transform: translateX(-15px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+
+
+@media (max-width: 638px) {
+    #mais {
+    width: 460px;
+    }
+    #setas {
+    display: none;
+    }
+    #cards {
+        overflow-x: auto; 
+    }
+}
+
+@media (max-width: 520px) {
+    #mais {
+    width: 100%;
+    }
+    #content {
+    padding: 20px;
+    }
+}
+
